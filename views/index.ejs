@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+
+<h1>A place where you can save your thougts!</h1>
+
+<div class="container">
+  <div class="title">
+    <p>Notes</p>
+  </div>
+  <form class="notebook" action="/post" method="post">
+    <input
+      type="text"
+      name="new-note"
+      placeholder="Save your ideias"
+      maxlength="100"
+      autocomplete="off"
+    />
+    <button type="submit" name="Note-list" value="Notes">✏️</button>
+  </form>
+  <div class="user-notes">
+    <div class="container-text">
+      <%if(Array.isArray(tNotes) && tNotes.length > 0) {%> <% for(let i = 0; i <
+      tNotes.length; ++i) { %>
+      <p><%= tNotes[i] %></p>
+      <form
+        class="delete"
+        action="/delete/<%= i %>"
+        method="post"
+        style="display: inline"
+      >
+        <button type="submit">🗑️</button>
+      </form>
+      <%}%> <% } %>
+    </div>
+  </div>
+</div>
+
+<%- include("partials/footer.ejs") %>
