@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  min-height: 100dvh;
   background-color: #8dbcc7;
   font-family: "Quicksand", "sans-serif";
   color: white;
@@ -10,7 +11,7 @@ body {
 h1 {
   text-align: center;
   padding-top: 20px;
-  font-size: 5rem;
+  font-size: 2rem;
 }
 
 .container {
@@ -25,7 +26,7 @@ h1 {
   background-color: #a4ccd9;
   border-radius: 15px 15px 0 0;
   height: 4rem;
-  width: 35rem;
+  width: 20rem;
   border: white solid 2px;
   border-bottom: none !important;
 }
@@ -38,12 +39,12 @@ h1 {
 
 .notebook {
   display: flex;
-  gap: 20px;
+  gap: 1rem;
   align-items: center;
   padding: 25px 0;
   background-color: #c4e1e6;
   height: 3rem;
-  width: 35rem;
+  width: 20rem;
   border: white solid 2px;
   border-bottom: none !important;
   border-top: none !important;
@@ -51,10 +52,10 @@ h1 {
 
 input {
   border-radius: 15px 15px 15px 15px;
+  margin-left: 2rem;
   border: none;
-  margin-left: 120px;
   height: 3rem;
-  width: 18rem;
+  width: 12rem;
   text-align: center;
 }
 
@@ -72,7 +73,7 @@ button {
   height: 30rem;
   max-height: 50rem;
   overflow-y: auto;
-  width: 35rem;
+  width: 20rem;
   border-radius: 0 0 15px 15px;
   background-color: #c4e1e6;
   border-top: none !important;
@@ -90,4 +91,27 @@ button {
 footer {
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 5rem;
+  }
+
+  .title {
+    width: 35rem;
+  }
+
+  .notebook {
+    width: 35rem;
+  }
+
+  .user-notes {
+    width: 35rem;
+  }
+
+  input {
+    width: 20rem;
+    margin-left: 6rem;
+  }
 }
